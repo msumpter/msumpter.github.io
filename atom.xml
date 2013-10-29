@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Mat Sumpter]]></title>
-  <link href="http://www.matsumpter.com/atom.xml" rel="self"/>
-  <link href="http://www.matsumpter.com/"/>
-  <updated>2013-10-29T16:10:36+01:00</updated>
-  <id>http://www.matsumpter.com/</id>
+  <link href="http://matsumpter.com/atom.xml" rel="self"/>
+  <link href="http://matsumpter.com/"/>
+  <updated>2013-10-29T22:10:25+01:00</updated>
+  <id>http://matsumpter.com/</id>
   <author>
     <name><![CDATA[Mat Sumpter]]></name>
     <email><![CDATA[mat@matsumpter.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A migration to Octopress/Jekyll]]></title>
-    <link href="http://www.matsumpter.com/blog/2013/a-migration-to-octopress-jekyll/"/>
+    <link href="http://matsumpter.com/blog/2013/a-migration-to-octopress-jekyll/"/>
     <updated>2013-06-23T08:04:00+02:00</updated>
-    <id>http://www.matsumpter.com/blog/2013/a-migration-to-octopress-jekyll</id>
+    <id>http://matsumpter.com/blog/2013/a-migration-to-octopress-jekyll</id>
     <content type="html"><![CDATA[<p>A first post after my migration to Octopress.</p>
 
 <p>Write more here later</p>

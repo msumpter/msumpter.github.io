@@ -1,35 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://www.matsumpter.com/blog/2013/a-migration-to-octopress-jekyll/</loc>
+        <loc>http://matsumpter.com/blog/2013/a-migration-to-octopress-jekyll/</loc>
         <lastmod>2013-10-29T15:59:55+01:00</lastmod>
     </url>
     <url>
-        <loc>http://www.matsumpter.com/robots.txt</loc>
+        <loc>http://matsumpter.com/robots.txt</loc>
         <lastmod>2013-10-29T15:59:55+01:00</lastmod>
     </url>
     <url>
-        <loc>http://www.matsumpter.com/resume.html</loc>
+        <loc>http://matsumpter.com/resume.html</loc>
         <lastmod>2013-10-29T15:59:55+01:00</lastmod>
     </url>
     <url>
-        <loc>http://www.matsumpter.com/blog/archives/</loc>
+        <loc>http://matsumpter.com/blog/archives/</loc>
         <lastmod>2013-10-29T15:59:55+01:00</lastmod>
     </url>
     <url>
-        <loc>http://www.matsumpter.com/blog/</loc>
+        <loc>http://matsumpter.com/blog/</loc>
         <lastmod>2013-10-29T15:59:55+01:00</lastmod>
     </url>
     <url>
-        <loc>http://www.matsumpter.com/404.html</loc>
+        <loc>http://matsumpter.com/404.html</loc>
         <lastmod>2013-10-29T15:59:55+01:00</lastmod>
     </url>
     <url>
-        <loc>http://www.matsumpter.com/</loc>
+        <loc>http://matsumpter.com/</loc>
         <lastmod>2013-10-29T15:59:55+01:00</lastmod>
     </url>
     <url>
-        <loc>http://www.matsumpter.com/about.html</loc>
+        <loc>http://matsumpter.com/about.html</loc>
         <lastmod>2013-10-29T15:59:55+01:00</lastmod>
     </url>
 </urlset>
