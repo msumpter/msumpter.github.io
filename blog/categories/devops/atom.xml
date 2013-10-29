@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: devops | Mat Sumpter]]></title>
+  <link href="http://www.matsumpter.com/blog/categories/devops/atom.xml" rel="self"/>
+  <link href="http://www.matsumpter.com/"/>
+  <updated>2013-10-29T16:10:36+01:00</updated>
+  <id>http://www.matsumpter.com/</id>
+  <author>
+    <name><![CDATA[Mat Sumpter]]></name>
+    <email><![CDATA[mat@matsumpter.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A migration to Octopress/Jekyll]]></title>
+    <link href="http://www.matsumpter.com/blog/2013/a-migration-to-octopress-jekyll/"/>
+    <updated>2013-06-23T08:04:00+02:00</updated>
+    <id>http://www.matsumpter.com/blog/2013/a-migration-to-octopress-jekyll</id>
+    <content type="html"><![CDATA[<p>A first post after my migration to Octopress.</p>
+
+<p>Write more here later</p>
+]]></content>
+  </entry>
+  
+</feed>
