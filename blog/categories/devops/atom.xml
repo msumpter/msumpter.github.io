@@ -4,7 +4,7 @@
   <title><![CDATA[Category: devops | Mat Sumpter]]></title>
   <link href="http://matsumpter.com/blog/categories/devops/atom.xml" rel="self"/>
   <link href="http://matsumpter.com/"/>
-  <updated>2014-08-18T22:55:49+02:00</updated>
+  <updated>2014-08-18T23:14:22+02:00</updated>
   <id>http://matsumpter.com/</id>
   <author>
     <name><![CDATA[Mat Sumpter]]></name>
@@ -22,6 +22,10 @@
 <li>Fetch varnish logs for particular IP address:
   <code>
   varnishlog -o -c | perl -ne 'BEGIN { $/ = "";} print if (/RxURL.*\/$/m and /ReqStart.*127.0.0.1/);'
+ </code></li>
+<li>Fetch 50x errors from backend (Varnish &lt; v3):
+  <code>
+  varnishlog -c -o TxStatus ^50
  </code></li>
 </ul>
 

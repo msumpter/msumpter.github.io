@@ -104,6 +104,10 @@
   <code>
   varnishlog -o -c | perl -ne 'BEGIN { $/ = "";} print if (/RxURL.*\/$/m and /ReqStart.*127.0.0.1/);'
  </code></li>
+<li>Fetch 50x errors from backend (Varnish &lt; v3):
+  <code>
+  varnishlog -c -o TxStatus ^50
+ </code></li>
 </ul>
 
 
