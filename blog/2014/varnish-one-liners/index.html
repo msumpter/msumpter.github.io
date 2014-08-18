@@ -11,8 +11,7 @@
     <title>Varnish One Liners - Mat Sumpter</title>
     <meta name="author" content="Mat Sumpter">
     
-    <meta name="description" content="Varnish One Liners Aug 18th, 2014 devops Fetch varnish logs for particular IP address:
-varnishlog -o -c | perl -ne &lsquo;BEGIN { $/ = &ldquo;&rdquo &hellip;">
+    <meta name="description" content="Varnish One Liners Aug 18th, 2014 devops Fetch varnish logs for particular IP address: varnishlog -o -c | perl -ne &lsquo;BEGIN { $/ = &ldquo;&rdquo &hellip;">
     
     <meta name="viewport" content="width=device-width">
     
@@ -100,12 +99,15 @@ varnishlog -o -c | perl -ne &lsquo;BEGIN { $/ = &ldquo;&rdquo &hellip;">
 
 
 
-  <p>Fetch varnish logs for particular IP address:
-varnishlog -o -c | perl -ne &lsquo;BEGIN { $/ = &ldquo;&rdquo;;} print if (/RxURL.<em>\/$/m and /ReqStart.</em>127.0.0.1/);&rsquo;</p>
+  <ul>
+<li>Fetch varnish logs for particular IP address:
+      varnishlog -o -c | perl -ne &lsquo;BEGIN { $/ = &ldquo;&rdquo;;} print if (/RxURL.<em>\/$/m and /ReqStart.</em>127.0.0.1/);&rsquo;</li>
+</ul>
+
 
 <p>Others:
-<a href="https://www.varnish-cache.org/trac/wiki/VarnishlogExamples">https://www.varnish-cache.org/trac/wiki/VarnishlogExamples</a>
-<a href="http://mclear.co.uk/2011/04/25/varnishlog-cheat-sheet/">http://mclear.co.uk/2011/04/25/varnishlog-cheat-sheet/</a></p>
+* <a href="https://www.varnish-cache.org/trac/wiki/VarnishlogExamples">https://www.varnish-cache.org/trac/wiki/VarnishlogExamples</a>
+* <a href="http://mclear.co.uk/2011/04/25/varnishlog-cheat-sheet/">http://mclear.co.uk/2011/04/25/varnishlog-cheat-sheet/</a></p>
 
 
 </article>
