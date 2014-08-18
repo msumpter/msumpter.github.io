@@ -4,7 +4,7 @@
   <title><![CDATA[Mat Sumpter]]></title>
   <link href="http://matsumpter.com/atom.xml" rel="self"/>
   <link href="http://matsumpter.com/"/>
-  <updated>2014-08-18T22:51:49+02:00</updated>
+  <updated>2014-08-18T22:55:49+02:00</updated>
   <id>http://matsumpter.com/</id>
   <author>
     <name><![CDATA[Mat Sumpter]]></name>
@@ -20,13 +20,19 @@
     <id>http://matsumpter.com/blog/2014/varnish-one-liners</id>
     <content type="html"><![CDATA[<ul>
 <li>Fetch varnish logs for particular IP address:
-      varnishlog -o -c | perl -ne &lsquo;BEGIN { $/ = &ldquo;&rdquo;;} print if (/RxURL.<em>\/$/m and /ReqStart.</em>127.0.0.1/);&rsquo;</li>
+  <code>
+  varnishlog -o -c | perl -ne 'BEGIN { $/ = "";} print if (/RxURL.*\/$/m and /ReqStart.*127.0.0.1/);'
+ </code></li>
 </ul>
 
 
-<p>Others:
-* <a href="https://www.varnish-cache.org/trac/wiki/VarnishlogExamples">https://www.varnish-cache.org/trac/wiki/VarnishlogExamples</a>
-* <a href="http://mclear.co.uk/2011/04/25/varnishlog-cheat-sheet/">http://mclear.co.uk/2011/04/25/varnishlog-cheat-sheet/</a></p>
+<p>Others:</p>
+
+<ul>
+<li><a href="https://www.varnish-cache.org/trac/wiki/VarnishlogExamples">https://www.varnish-cache.org/trac/wiki/VarnishlogExamples</a></li>
+<li><a href="http://mclear.co.uk/2011/04/25/varnishlog-cheat-sheet/">http://mclear.co.uk/2011/04/25/varnishlog-cheat-sheet/</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
