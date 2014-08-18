@@ -11,7 +11,8 @@
     <title>Mat Sumpter</title>
     <meta name="author" content="Mat Sumpter">
     
-    <meta name="description" content=" A migration to Octopress/Jekyll Jun 23rd, 2013 devops A first post after my migration to Octopress. Write more here later ">
+    <meta name="description" content="Varnish One Liners Aug 18th, 2014 devops Fetch varnish logs for particular IP address:
+varnishlog -o -c | perl -ne &lsquo;BEGIN { $/ = &ldquo;&rdquo &hellip;">
     
     <meta name="viewport" content="width=device-width">
     
@@ -57,6 +58,64 @@
 
           
 
+
+  
+  <article class="listing">
+    <header>
+  
+  <h1 class="beta">
+    <a href="/blog/2014/varnish-one-liners/">Varnish One Liners</a>
+  </h1>
+  
+
+  
+  <div class="meta clearfix">
+    
+
+
+
+
+
+
+
+
+  
+
+
+<time class="pull-left" datetime="2014-08-18T16:28:00+02:00" pubdate data-updated="true"><i class="icon-calendar"></i> Aug 18<span>th</span>, 2014</time>
+    
+
+
+
+  
+  <div class="pull-left">
+    <i class="icon-tags"></i>
+    <ul class="tags unstyled">
+    
+      <li><a href="/blog/categories/devops/">devops</a></li>
+    
+    </ul>
+  </div>
+  
+
+    
+  </div>
+  
+</header>
+
+
+
+
+  <p>Fetch varnish logs for particular IP address:
+varnishlog -o -c | perl -ne &lsquo;BEGIN { $/ = &ldquo;&rdquo;;} print if (/RxURL.<em>\/$/m and /ReqStart.</em>127.0.0.1/);&rsquo;</p>
+
+<p>Others:
+<a href="https://www.varnish-cache.org/trac/wiki/VarnishlogExamples">https://www.varnish-cache.org/trac/wiki/VarnishlogExamples</a>
+<a href="http://mclear.co.uk/2011/04/25/varnishlog-cheat-sheet/">http://mclear.co.uk/2011/04/25/varnishlog-cheat-sheet/</a></p>
+
+
+  </article>
+  <hr>
 
   
   <article class="listing">
@@ -143,6 +202,10 @@
   <section id="recent-posts" class="aside-module grid__item one-whole lap-one-half">
   <h1 class="title delta">Recent Posts</h1>
   <ul class="divided">
+    
+      <li class="post">
+        <a href="/blog/2014/varnish-one-liners/">Varnish One Liners</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/a-migration-to-octopress-jekyll/">A migration to Octopress/Jekyll</a>
