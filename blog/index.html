@@ -11,7 +11,7 @@
     <title>Mat Sumpter</title>
     <meta name="author" content="Mat Sumpter">
     
-    <meta name="description" content="Varnish One Liners Aug 18th, 2014 devops Fetch varnish logs for particular IP address: varnishlog -o -c | perl -ne 'BEGIN { $/ = "";} print if (/ &hellip;">
+    <meta name="description" content="other handy oneliners Aug 21st, 2014 Top IP addresses in Apache access_log tail -10000 access_log | awk '{print $1}' | sort | uniq -c | sort -n | &hellip;">
     
     <meta name="viewport" content="width=device-width">
     
@@ -57,6 +57,60 @@
 
           
 
+
+  
+  <article class="listing">
+    <header>
+  
+  <h1 class="beta">
+    <a href="/blog/2014/other-handy-oneliners/">other handy oneliners</a>
+  </h1>
+  
+
+  
+  <div class="meta clearfix">
+    
+
+
+
+
+
+
+
+
+  
+
+
+<time class="pull-left" datetime="2014-08-21T21:20:00+02:00" pubdate data-updated="true"><i class="icon-calendar"></i> Aug 21<span>st</span>, 2014</time>
+    
+
+
+
+  
+
+    
+  </div>
+  
+</header>
+
+
+
+
+  <ul>
+<li><p>Top IP addresses in Apache access_log
+  <code>
+  tail -10000 access_log | awk '{print $1}' | sort | uniq -c | sort -n | tail
+ </code></p></li>
+<li><p>Top IPs from netstat
+  <code>
+  netstat -tn 2&gt;/dev/null | grep :80 | awk '{print $5}' |sed -e 's/::ffff://' |cut -d: -f1 | sort | uniq -c | sort -rn |head
+ </code></p></li>
+</ul>
+
+
+
+  </article>
+  <hr>
 
   
   <article class="listing">
@@ -214,6 +268,10 @@
   <section id="recent-posts" class="aside-module grid__item one-whole lap-one-half">
   <h1 class="title delta">Recent Posts</h1>
   <ul class="divided">
+    
+      <li class="post">
+        <a href="/blog/2014/other-handy-oneliners/">other handy oneliners</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/varnish-one-liners/">Varnish One Liners</a>
