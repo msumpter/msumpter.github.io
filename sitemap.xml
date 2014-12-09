@@ -10,7 +10,11 @@
     </url>
     <url>
         <loc>http://matsumpter.com/blog/2014/other-handy-oneliners/</loc>
-        <lastmod>2014-08-21T21:24:07+02:00</lastmod>
+        <lastmod>2014-08-21T21:30:16+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://matsumpter.com/blog/2014/openresty-centos-7-systemd-script/</loc>
+        <lastmod>2014-12-09T21:34:20+01:00</lastmod>
     </url>
     <url>
         <loc>http://matsumpter.com/robots.txt</loc>
@@ -22,11 +26,11 @@
     </url>
     <url>
         <loc>http://matsumpter.com/blog/archives/</loc>
-        <lastmod>2014-08-21T21:24:07+02:00</lastmod>
+        <lastmod>2014-12-09T21:34:20+01:00</lastmod>
     </url>
     <url>
         <loc>http://matsumpter.com/blog/</loc>
-        <lastmod>2014-08-21T21:24:07+02:00</lastmod>
+        <lastmod>2014-12-09T21:34:20+01:00</lastmod>
     </url>
     <url>
         <loc>http://matsumpter.com/404.html</loc>
@@ -34,7 +38,7 @@
     </url>
     <url>
         <loc>http://matsumpter.com/</loc>
-        <lastmod>2014-08-21T21:24:07+02:00</lastmod>
+        <lastmod>2014-12-09T21:34:20+01:00</lastmod>
     </url>
     <url>
         <loc>http://matsumpter.com/about.html</loc>

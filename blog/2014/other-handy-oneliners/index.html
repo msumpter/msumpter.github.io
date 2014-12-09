@@ -8,10 +8,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>other handy oneliners - Mat Sumpter</title>
+    <title>Other handy oneliners - Mat Sumpter</title>
     <meta name="author" content="Mat Sumpter">
     
-    <meta name="description" content="other handy oneliners Aug 21st, 2014 Top IP addresses in Apache access_log tail -10000 access_log | awk '{print $1}' | sort | uniq -c | sort -n | &hellip;">
+    <meta name="description" content="Other handy oneliners Aug 21st, 2014 Top IP addresses in Apache access_log tail -10000 access_log | awk '{print $1}' | sort | uniq -c | sort -n | &hellip;">
     
     <meta name="viewport" content="width=device-width">
     
@@ -58,7 +58,7 @@
           <article class="post">
   <header>
   
-  <h1 class="title indent">other handy oneliners</h1>
+  <h1 class="title indent">Other handy oneliners</h1>
   
 
   
@@ -99,6 +99,10 @@
   <code>
   netstat -tn 2&gt;/dev/null | grep :80 | awk '{print $5}' |sed -e 's/::ffff://' |cut -d: -f1 | sort | uniq -c | sort -rn |head
  </code></p></li>
+<li>Capture sterr/stout from specified PID
+  <code>
+  strace -ff -e trace=write -e write=1,2 -p PID
+ </code></li>
 </ul>
 
 
@@ -138,7 +142,11 @@
   <ul class="divided">
     
       <li class="post">
-        <a href="/blog/2014/other-handy-oneliners/">other handy oneliners</a>
+        <a href="/blog/2014/openresty-centos-7-systemd-script/">OpenResty CentOS 7 Systemd Script</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/other-handy-oneliners/">Other handy oneliners</a>
       </li>
     
       <li class="post">

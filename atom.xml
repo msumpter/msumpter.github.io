@@ -4,7 +4,7 @@
   <title><![CDATA[Mat Sumpter]]></title>
   <link href="http://matsumpter.com/atom.xml" rel="self"/>
   <link href="http://matsumpter.com/"/>
-  <updated>2014-08-21T21:24:11+02:00</updated>
+  <updated>2014-12-09T21:38:56+01:00</updated>
   <id>http://matsumpter.com/</id>
   <author>
     <name><![CDATA[Mat Sumpter]]></name>
@@ -14,7 +14,61 @@
 
   
   <entry>
-    <title type="html"><![CDATA[other handy oneliners]]></title>
+    <title type="html"><![CDATA[OpenResty CentOS 7 Systemd Script]]></title>
+    <link href="http://matsumpter.com/blog/2014/openresty-centos-7-systemd-script/"/>
+    <updated>2014-12-09T21:29:00+01:00</updated>
+    <id>http://matsumpter.com/blog/2014/openresty-centos-7-systemd-script</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve been slowly getting adjusted to systemd on CentOS 7. OpenResty has been gaining in popularity and I was interested in getting a proper build for CentOS 7.</p>
+
+<p>Below is my systemd service file for OpenResty/nginx, this is based on the default install path /usr/local/openresty
+Filename: /usr/lib/systemd/system/nginx.service</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[Unit]
+</span><span class='line'>Description=The nginx HTTP and reverse proxy server
+</span><span class='line'>After=syslog.target network.target remote-fs.target nss-lookup.target
+</span><span class='line'>
+</span><span class='line'>[Service]
+</span><span class='line'>Type=forking
+</span><span class='line'>PIDFile=/usr/local/openresty/nginx/logs/nginx.pid
+</span><span class='line'>ExecStartPre=/usr/local/openresty/nginx/sbin/nginx -t
+</span><span class='line'>ExecStart=/usr/local/openresty/nginx/sbin/nginx
+</span><span class='line'>ExecReload=/bin/kill -s HUP $MAINPID
+</span><span class='line'>ExecStop=/bin/kill -s QUIT $MAINPID
+</span><span class='line'>PrivateTmp=true
+</span><span class='line'>
+</span><span class='line'>[Install]
+</span><span class='line'>WantedBy=multi-user.target</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then to enable and start the new service</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>systemctl enable nginx.service
+</span><span class='line'>systemctl start nginx.service</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This post may evolve as I work on building an RPM for OpenResty based on the EPEL nginx SRPM package. I should note the majority of the service file above is from the EPEL nginx package.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Other handy oneliners]]></title>
     <link href="http://matsumpter.com/blog/2014/other-handy-oneliners/"/>
     <updated>2014-08-21T21:20:00+02:00</updated>
     <id>http://matsumpter.com/blog/2014/other-handy-oneliners</id>
@@ -27,6 +81,10 @@
   <code>
   netstat -tn 2&gt;/dev/null | grep :80 | awk '{print $5}' |sed -e 's/::ffff://' |cut -d: -f1 | sort | uniq -c | sort -rn |head
  </code></p></li>
+<li>Capture sterr/stout from specified PID
+  <code>
+  strace -ff -e trace=write -e write=1,2 -p PID
+ </code></li>
 </ul>
 
 ]]></content>
