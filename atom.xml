@@ -4,7 +4,7 @@
   <title><![CDATA[Mat Sumpter]]></title>
   <link href="http://matsumpter.com/atom.xml" rel="self"/>
   <link href="http://matsumpter.com/"/>
-  <updated>2014-12-09T21:38:56+01:00</updated>
+  <updated>2014-12-10T17:17:40+01:00</updated>
   <id>http://matsumpter.com/</id>
   <author>
     <name><![CDATA[Mat Sumpter]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Pseudo IPv4 addresses for IPv6 users - OpenResty]]></title>
+    <link href="http://matsumpter.com/blog/2014/pseudo-ipv4-addresses-for-ipv6-users-openresty/"/>
+    <updated>2014-12-09T22:41:00+01:00</updated>
+    <id>http://matsumpter.com/blog/2014/pseudo-ipv4-addresses-for-ipv6-users-openresty</id>
+    <content type="html"><![CDATA[<p>CloudFlare was gracious enough to open source a Lua function to convert IPv6 addresses into pseudo IPv4 addresses using the Class E addressesing space.</p>
+
+<p>The class E block of addresses are reserved and cannot be used for external routed devices, so we know there won&rsquo;t be an overlap with existing IPv4 users.</p>
+
+<p>Reference:
+<a href="http://blog.cloudflare.com/eliminating-the-last-reasons-to-not-enable-ipv6/">http://blog.cloudflare.com/eliminating-the-last-reasons-to-not-enable-ipv6/</a>
+<a href="http://stackoverflow.com/questions/10975935/lua-function-check-if-ipv4-or-ipv6-or-string">http://stackoverflow.com/questions/10975935/lua-function-check-if-ipv4-or-ipv6-or-string</a>
+<a href="http://wiki.nginx.org/HttpLuaModule#ngx.send_headers">http://wiki.nginx.org/HttpLuaModule#ngx.send_headers</a>
+<a href="https://github.com/octohost/openresty">https://github.com/octohost/openresty</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[OpenResty CentOS 7 Systemd Script]]></title>

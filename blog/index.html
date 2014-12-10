@@ -11,7 +11,7 @@
     <title>Mat Sumpter</title>
     <meta name="author" content="Mat Sumpter">
     
-    <meta name="description" content="OpenResty CentOS 7 Systemd Script Dec 9th, 2014 I&rsquo;ve been slowly getting adjusted to systemd on CentOS 7. OpenResty has been gaining in &hellip;">
+    <meta name="description" content="Pseudo IPv4 addresses for IPv6 users - OpenResty Dec 9th, 2014 CloudFlare was gracious enough to open source a Lua function to convert IPv6 &hellip;">
     
     <meta name="viewport" content="width=device-width">
     
@@ -57,6 +57,58 @@
 
           
 
+
+  
+  <article class="listing">
+    <header>
+  
+  <h1 class="beta">
+    <a href="/blog/2014/pseudo-ipv4-addresses-for-ipv6-users-openresty/">Pseudo IPv4 addresses for IPv6 users - OpenResty</a>
+  </h1>
+  
+
+  
+  <div class="meta clearfix">
+    
+
+
+
+
+
+
+
+
+  
+
+
+<time class="pull-left" datetime="2014-12-09T22:41:00+01:00" pubdate data-updated="true"><i class="icon-calendar"></i> Dec 9<span>th</span>, 2014</time>
+    
+
+
+
+  
+
+    
+  </div>
+  
+</header>
+
+
+
+
+  <p>CloudFlare was gracious enough to open source a Lua function to convert IPv6 addresses into pseudo IPv4 addresses using the Class E addressesing space.</p>
+
+<p>The class E block of addresses are reserved and cannot be used for external routed devices, so we know there won&rsquo;t be an overlap with existing IPv4 users.</p>
+
+<p>Reference:
+<a href="http://blog.cloudflare.com/eliminating-the-last-reasons-to-not-enable-ipv6/">http://blog.cloudflare.com/eliminating-the-last-reasons-to-not-enable-ipv6/</a>
+<a href="http://stackoverflow.com/questions/10975935/lua-function-check-if-ipv4-or-ipv6-or-string">http://stackoverflow.com/questions/10975935/lua-function-check-if-ipv4-or-ipv6-or-string</a>
+<a href="http://wiki.nginx.org/HttpLuaModule#ngx.send_headers">http://wiki.nginx.org/HttpLuaModule#ngx.send_headers</a>
+<a href="https://github.com/octohost/openresty">https://github.com/octohost/openresty</a></p>
+
+
+  </article>
+  <hr>
 
   
   <article class="listing">
@@ -361,6 +413,10 @@ Filename: /usr/lib/systemd/system/nginx.service</p>
   <section id="recent-posts" class="aside-module grid__item one-whole lap-one-half">
   <h1 class="title delta">Recent Posts</h1>
   <ul class="divided">
+    
+      <li class="post">
+        <a href="/blog/2014/pseudo-ipv4-addresses-for-ipv6-users-openresty/">Pseudo IPv4 addresses for IPv6 users - OpenResty</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/openresty-centos-7-systemd-script/">OpenResty CentOS 7 Systemd Script</a>

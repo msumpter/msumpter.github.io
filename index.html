@@ -8,10 +8,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>This is the title for you homepage - Mat Sumpter</title>
+    <title>Mat Sumpter</title>
     <meta name="author" content="Mat Sumpter">
     
-    <meta name="description" content="Hear no evil Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, facilis illo magni nobis ea quibusdam blanditiis officia ex dolorum &hellip;">
+    <meta name="description" content="Pseudo IPv4 addresses for IPv6 users - OpenResty Dec 9th, 2014 CloudFlare was gracious enough to open source a Lua function to convert IPv6 &hellip;">
     
     <meta name="viewport" content="width=device-width">
     
@@ -48,96 +48,420 @@
     </header>
 
     
-      <div class="hero" style="background-image: url('/images/night.jpg');">
-  <div class="grid-wrapper">
-    <div class="grid flex">
-      <div class="grid__item flex__item two-fifths palm-one-whole avatar">
-        <img class="gravatar" src="/images/gravatar.jpg" alt="Mat Sumpter's Picture" data-gravatar="mat@matsumpter.com">
-      </div>
-      <div class="grid__item flex__item three-fifths palm-one-whole">
-      <p class="lead">
-Welcome! Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-</p>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="credit">
-  </div>
-</div>
-
-    
 
     <div class="grid-wrapper">
       <div class="grid grid-center">
         
-        <div class="grid__item one-whole">
+        <div class="grid__item two-thirds lap-one-whole palm-one-whole">
         
 
           
 
-<div class="grid-wrapper">
-  <div class="grid">
-    <div class="grid__item one-third lap-one-whole palm-one-whole usp">
-      <div class="grid">
-        <div class="grid__item one-whole lap-one-third">
-          <span class="icon">
-            <i class="icon-laptop"></i>
-          </span>
-        </div>
 
-        <div class="grid__item one-whole lap-two-thirds">
-          <h2 class="title">Hear no evil</h2>
-<hr>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, facilis illo magni nobis ea quibusdam blanditiis officia ex dolorum laboriosam dolor earum inventore aperiam nam molestiae. Aperiam, est temporibus officiis.
-</p>
-        </div>
-      </div>
-    </div>
+  
+  <article class="listing">
+    <header>
+  
+  <h1 class="beta">
+    <a href="/blog/2014/pseudo-ipv4-addresses-for-ipv6-users-openresty/">Pseudo IPv4 addresses for IPv6 users - OpenResty</a>
+  </h1>
+  
 
-    <div class="grid__item one-third lap-one-whole palm-one-whole usp">
-      <div class="grid">
-        <div class="grid__item one-whole lap-one-third">
-          <span class="icon">
-            <i class="icon-search"></i>
-          </span>
-        </div>
+  
+  <div class="meta clearfix">
+    
 
-        <div class="grid__item one-whole lap-two-thirds">
-          <h2 class="title">See no evil</h2>
-<hr>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quia magni ipsum sapiente libero perspiciatis adipisci quibusdam nam nemo aut asperiores deserunt consectetur. Rem distinctio libero amet molestias saepe vero!
-</p>
-        </div>
-      </div>
-    </div>
 
-    <div class="grid__item one-third lap-one-whole palm-one-whole usp">
-      <div class="grid">
-        <div class="grid__item one-whole lap-one-third">
-          <span class="icon">
-            <i class="icon-coffee"></i>
-          </span>
-        </div>
-		 
-        <div class="grid__item one-whole lap-two-thirds">
-         <h2 class="title">Speak no evil</h2>
-<hr>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus repellendus officia iusto reiciendis quae quod consequuntur tempora. Rem, placeat laboriosam perferendis eum obcaecati illo iste molestias? Optio in expedita dolor!
-</p>
-        </div>
-      </div>
-    </div>
+
+
+
+
+
+
+  
+
+
+<time class="pull-left" datetime="2014-12-09T22:41:00+01:00" pubdate data-updated="true"><i class="icon-calendar"></i> Dec 9<span>th</span>, 2014</time>
+    
+
+
+
+  
+
+    
   </div>
+  
+</header>
+
+
+
+
+  <p>CloudFlare was gracious enough to open source a Lua function to convert IPv6 addresses into pseudo IPv4 addresses using the Class E addressesing space.</p>
+
+<p>The class E block of addresses are reserved and cannot be used for external routed devices, so we know there won&rsquo;t be an overlap with existing IPv4 users.</p>
+
+<p>Reference:
+<a href="http://blog.cloudflare.com/eliminating-the-last-reasons-to-not-enable-ipv6/">http://blog.cloudflare.com/eliminating-the-last-reasons-to-not-enable-ipv6/</a>
+<a href="http://stackoverflow.com/questions/10975935/lua-function-check-if-ipv4-or-ipv6-or-string">http://stackoverflow.com/questions/10975935/lua-function-check-if-ipv4-or-ipv6-or-string</a>
+<a href="http://wiki.nginx.org/HttpLuaModule#ngx.send_headers">http://wiki.nginx.org/HttpLuaModule#ngx.send_headers</a>
+<a href="https://github.com/octohost/openresty">https://github.com/octohost/openresty</a></p>
+
+
+  </article>
+  <hr>
+
+  
+  <article class="listing">
+    <header>
+  
+  <h1 class="beta">
+    <a href="/blog/2014/openresty-centos-7-systemd-script/">OpenResty CentOS 7 Systemd Script</a>
+  </h1>
+  
+
+  
+  <div class="meta clearfix">
+    
+
+
+
+
+
+
+
+
+  
+
+
+<time class="pull-left" datetime="2014-12-09T21:29:00+01:00" pubdate data-updated="true"><i class="icon-calendar"></i> Dec 9<span>th</span>, 2014</time>
+    
+
+
+
+  
+
+    
+  </div>
+  
+</header>
+
+
+
+
+  <p>I&rsquo;ve been slowly getting adjusted to systemd on CentOS 7. OpenResty has been gaining in popularity and I was interested in getting a proper build for CentOS 7.</p>
+
+<p>Below is my systemd service file for OpenResty/nginx, this is based on the default install path /usr/local/openresty
+Filename: /usr/lib/systemd/system/nginx.service</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[Unit]
+</span><span class='line'>Description=The nginx HTTP and reverse proxy server
+</span><span class='line'>After=syslog.target network.target remote-fs.target nss-lookup.target
+</span><span class='line'>
+</span><span class='line'>[Service]
+</span><span class='line'>Type=forking
+</span><span class='line'>PIDFile=/usr/local/openresty/nginx/logs/nginx.pid
+</span><span class='line'>ExecStartPre=/usr/local/openresty/nginx/sbin/nginx -t
+</span><span class='line'>ExecStart=/usr/local/openresty/nginx/sbin/nginx
+</span><span class='line'>ExecReload=/bin/kill -s HUP $MAINPID
+</span><span class='line'>ExecStop=/bin/kill -s QUIT $MAINPID
+</span><span class='line'>PrivateTmp=true
+</span><span class='line'>
+</span><span class='line'>[Install]
+</span><span class='line'>WantedBy=multi-user.target</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then to enable and start the new service</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>systemctl enable nginx.service
+</span><span class='line'>systemctl start nginx.service</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This post may evolve as I work on building an RPM for OpenResty based on the EPEL nginx SRPM package. I should note the majority of the service file above is from the EPEL nginx package.</p>
+
+
+  </article>
+  <hr>
+
+  
+  <article class="listing">
+    <header>
+  
+  <h1 class="beta">
+    <a href="/blog/2014/other-handy-oneliners/">Other handy oneliners</a>
+  </h1>
+  
+
+  
+  <div class="meta clearfix">
+    
+
+
+
+
+
+
+
+
+  
+
+
+<time class="pull-left" datetime="2014-08-21T21:20:00+02:00" pubdate data-updated="true"><i class="icon-calendar"></i> Aug 21<span>st</span>, 2014</time>
+    
+
+
+
+  
+
+    
+  </div>
+  
+</header>
+
+
+
+
+  <ul>
+<li><p>Top IP addresses in Apache access_log
+  <code>
+  tail -10000 access_log | awk '{print $1}' | sort | uniq -c | sort -n | tail
+ </code></p></li>
+<li><p>Top IPs from netstat
+  <code>
+  netstat -tn 2&gt;/dev/null | grep :80 | awk '{print $5}' |sed -e 's/::ffff://' |cut -d: -f1 | sort | uniq -c | sort -rn |head
+ </code></p></li>
+<li>Capture sterr/stout from specified PID
+  <code>
+  strace -ff -e trace=write -e write=1,2 -p PID
+ </code></li>
+</ul>
+
+
+
+  </article>
+  <hr>
+
+  
+  <article class="listing">
+    <header>
+  
+  <h1 class="beta">
+    <a href="/blog/2014/varnish-one-liners/">Varnish One Liners</a>
+  </h1>
+  
+
+  
+  <div class="meta clearfix">
+    
+
+
+
+
+
+
+
+
+  
+
+
+<time class="pull-left" datetime="2014-08-18T16:28:00+02:00" pubdate data-updated="true"><i class="icon-calendar"></i> Aug 18<span>th</span>, 2014</time>
+    
+
+
+
+  
+  <div class="pull-left">
+    <i class="icon-tags"></i>
+    <ul class="tags unstyled">
+    
+      <li><a href="/blog/categories/devops/">devops</a></li>
+    
+    </ul>
+  </div>
+  
+
+    
+  </div>
+  
+</header>
+
+
+
+
+  <ul>
+<li>Fetch varnish logs for particular IP address:
+  <code>
+  varnishlog -o -c | perl -ne 'BEGIN { $/ = "";} print if (/RxURL.*\/$/m and /ReqStart.*127.0.0.1/);'
+ </code></li>
+<li>Fetch 50x errors from backend (Varnish &lt; v3):
+  <code>
+  varnishlog -c -o TxStatus ^50
+ </code></li>
+</ul>
+
+
+<p>Others:</p>
+
+<ul>
+<li><a href="https://www.varnish-cache.org/trac/wiki/VarnishlogExamples">https://www.varnish-cache.org/trac/wiki/VarnishlogExamples</a></li>
+<li><a href="http://mclear.co.uk/2011/04/25/varnishlog-cheat-sheet/">http://mclear.co.uk/2011/04/25/varnishlog-cheat-sheet/</a></li>
+</ul>
+
+
+
+  </article>
+  <hr>
+
+  
+  <article class="listing">
+    <header>
+  
+  <h1 class="beta">
+    <a href="/blog/2013/a-migration-to-octopress-jekyll/">A migration to Octopress/Jekyll</a>
+  </h1>
+  
+
+  
+  <div class="meta clearfix">
+    
+
+
+
+
+
+
+
+
+  
+
+
+<time class="pull-left" datetime="2013-06-23T08:04:00+02:00" pubdate data-updated="true"><i class="icon-calendar"></i> Jun 23<span>rd</span>, 2013</time>
+    
+
+
+
+  
+  <div class="pull-left">
+    <i class="icon-tags"></i>
+    <ul class="tags unstyled">
+    
+      <li><a href="/blog/categories/devops/">devops</a></li>
+    
+    </ul>
+  </div>
+  
+
+    
+  </div>
+  
+</header>
+
+
+
+
+  <p>A first post after my migration to Octopress.</p>
+
+<p>Write more here later</p>
+
+
+  </article>
+  <hr>
+
+
+        
+        </div>
+        
+        
+        <aside id="sidebar" class="grid__item one-third lap-one-whole palm-one-whole">
+          <div class="grid">
+
+  
+<section class="social aside-module grid__item one-whole lap-one-half">
+  <h1 class="title delta">
+    Follow me!
+  </h1>
+  <ul class="unstyled">
+    
+    
+    <li><a class="github" href="//github.com/msumpter"><i class="icon-github"></i> Github</a></li>
+    
+    <li><a class="gplus" href="//plus.google.com/101124579932438193017"><i class="icon-google-plus-sign"></i> Google+</a></li>
+    <li><a class="linkedin" href="//linkedin.com/in/matsumpter"><i class="icon-linkedin-sign"></i> LinkedIn</a></li>
+    
+    <li><a class="stackoverflow" href="//stackoverflow.com/users/2088770"><i class="icon-stackexchange"></i> StackOverflow</a></li>
+    <li><a class="twitter" href="//twitter.com/msumpter"><i class="icon-twitter"></i> Twitter</a></li>
+    
+  </ul>
+</section>
+
+
+  <section id="recent-posts" class="aside-module grid__item one-whole lap-one-half">
+  <h1 class="title delta">Recent Posts</h1>
+  <ul class="divided">
+    
+      <li class="post">
+        <a href="/blog/2014/pseudo-ipv4-addresses-for-ipv6-users-openresty/">Pseudo IPv4 addresses for IPv6 users - OpenResty</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/openresty-centos-7-systemd-script/">OpenResty CentOS 7 Systemd Script</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/other-handy-oneliners/">Other handy oneliners</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/varnish-one-liners/">Varnish One Liners</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/a-migration-to-octopress-jekyll/">A migration to Octopress/Jekyll</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section id="github-repos" class="aside-module grid__item one-whole lap-one-half">
+  <h1 class="title delta">
+    GitHub Repos
+    
+    <small class="pull-right">
+      <a class="btn" href="//github.com/msumpter" title="@msumpter on GitHub" target="_blank">
+        <i class="icon-external-link"></i>
+      </a>
+    </small>
+    
+  </h1>
+  <ul id="gh_repos" class="divided">
+    <li class="loading">
+      <i class="icon-spinner icon-spin"></i>
+    </li>
+  </ul>
+</section>
+
+
+
+
 </div>
 
-        
-        </div>
-        
+        </aside>
         
       </div>
     </div>
@@ -171,6 +495,31 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus repellendus o
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
+
+
+
+
+
+
+<script>
+  $(document).ready(function(){
+    if (!window.jXHR){
+      var jxhr = document.createElement('script');
+      jxhr.type = 'text/javascript';
+      jxhr.src = '/javascripts/libs/jXHR.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jxhr, s);
+    }
+
+    github.showRepos({
+      user: 'msumpter',
+      count: 0,
+      skip_forks: true,
+      target: '#gh_repos'
+    });
+  });
+</script>
+<script src="/javascripts/github.js"></script>
 
 
 
