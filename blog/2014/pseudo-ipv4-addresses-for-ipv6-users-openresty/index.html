@@ -94,6 +94,113 @@
 
 <p>The class E block of addresses are reserved and cannot be used for external routed devices, so we know there won&rsquo;t be an overlap with existing IPv4 users.</p>
 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http {
+</span><span class='line'>
+</span><span class='line'>...
+</span><span class='line'>
+</span><span class='line'>    init_by_lua '
+</span><span class='line'>function pseudo_ipv4(ip)
+</span><span class='line'>    -- check for format 1.11.111.111 for ipv4
+</span><span class='line'>    local chunks = {ip:match("(%d+)%.(%d+)%.(%d+)%.(%d+)")}
+</span><span class='line'>    if (#chunks == 4) then
+</span><span class='line'>        for _,v in pairs(chunks) do
+</span><span class='line'>            if (tonumber(v) &lt; 0 or tonumber(v) &gt; 255) then
+</span><span class='line'>                return 0
+</span><span class='line'>            end
+</span><span class='line'>        end
+</span><span class='line'>        return ip
+</span><span class='line'>    else
+</span><span class='line'>        -- Grab bottom 32 bits from MD5 hash
+</span><span class='line'>        local md5 = ngx.md5_bin(ip)
+</span><span class='line'>        local b1, b2, b3, b4 = md5:byte(13, 16)
+</span><span class='line'>
+</span><span class='line'>        -- Normalize first byte to fit in class E space
+</span><span class='line'>        b1 = bit.bor(0xF0, bit.band(b1, 0x0F))
+</span><span class='line'>
+</span><span class='line'>        return string.format("%d.%d.%d.%d", b1, b2, b3, b4)
+</span><span class='line'>    end
+</span><span class='line'>end
+</span><span class='line'>    ';
+</span><span class='line'>    server {
+</span><span class='line'>        listen       [::]:80;
+</span><span class='line'>        listen       80;
+</span><span class='line'>
+</span><span class='line'>...
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>        location / {
+</span><span class='line'>            default_type text/html;
+</span><span class='line'>            set_by_lua $pseudo_ip "return pseudo_ipv4(ngx.var.remote_addr)";
+</span><span class='line'>            proxy_buffering             off;
+</span><span class='line'>            proxy_set_header            Host $host;
+</span><span class='line'>            proxy_set_header            X-Forwarded-For $proxy_add_x_forwarded_for;
+</span><span class='line'>            proxy_set_header            X-Connecting-IPv6 $pseudo_ip;
+</span><span class='line'>            proxy_redirect              off;
+</span><span class='line'>            proxy_connect_timeout       10;
+</span><span class='line'>            proxy_send_timeout          30;
+</span><span class='line'>            proxy_read_timeout          30;
+</span><span class='line'>            proxy_pass                  http://backend;
+</span><span class='line'>
+</span><span class='line'>        }
+</span><span class='line'>
+</span><span class='line'>...
+</span><span class='line'>
+</span><span class='line'>}
+</span></code></pre></td></tr></table></div></figure>
+
+
 <p>Reference:
 <a href="http://blog.cloudflare.com/eliminating-the-last-reasons-to-not-enable-ipv6/">http://blog.cloudflare.com/eliminating-the-last-reasons-to-not-enable-ipv6/</a>
 <a href="http://stackoverflow.com/questions/10975935/lua-function-check-if-ipv4-or-ipv6-or-string">http://stackoverflow.com/questions/10975935/lua-function-check-if-ipv4-or-ipv6-or-string</a>
